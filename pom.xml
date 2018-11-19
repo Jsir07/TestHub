@@ -144,7 +144,7 @@
                     <encoding>UTF-8</encoding>
                     <!--动态指定执行的xml文件。${project.basedir}项目目录，${xmlFileName}maven文件-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>${project.basedir}/target/classes/testNg/api/${xmlFileName}</suiteXmlFile>
+                        <suiteXmlFile>${project.basedir}/target/classes/testNg/${xmlFileName}</suiteXmlFile>
                         <!--<suiteXmlFile>${project.basedir}/target/classes/testNg/api/APICollection-TestSuite.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
