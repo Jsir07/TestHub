@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="search_tags-搜索分类-测试集合" verbose="1" preserve-order="true">
+    <parameter name="report.config" value="src/main/resources/config/report/extent-config.xml"/>
+    <parameter name="system.info" value="reporter.config.MySystemInfo"/>
+
+    <test name="搜索分类 接口" preserve-order="true">
+        <classes>
+            <class name="com.jxq.douban.SearchTagsTest"/>
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="reporter.Listener.MyExtentTestNgFormatter"/>
+    </listeners>
+</suite>

@@ -1,0 +1,23 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "properties": {
+    "tags": {
+      "$id": "/properties/tags",
+      "type": "array",
+      "items": {
+        "$id": "/properties/tags/items",
+        "type": "string",
+        "title": "The 0th Schema ",
+        "default": "",
+        "examples": [
+          "热门",
+          "最新"
+        ]
+      }
+    }
+  },
+  "required": [
+    "tags"
+  ]
+}

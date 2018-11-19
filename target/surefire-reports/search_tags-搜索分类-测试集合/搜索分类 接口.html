@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>TestNG:  搜索分类 接口</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>搜索分类 接口</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Nov 19 22:07:10 CST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>1 seconds (1505 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.jxq.douban.SearchTagsTest.testcase1()'><b>testcase1</b><br>Test class: com.jxq.douban.SearchTagsTest<br>Test method: 电影首页。类别:type=movie source=index<br/>
+<a href="#Output-1169794610" onClick='toggleBox("Output-1169794610", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1169794610" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1169794610">
+RetrofitLog--> --> GET https://movie.douban.com/j/search_tags?type=movie&source=index<br/>
+RetrofitLog--> --> END GET<br/>
+RetrofitLog--> <-- 200 OK https://movie.douban.com/j/search_tags?type=movie&source=index (349ms)<br/>
+RetrofitLog--> Date: Mon, 19 Nov 2018 14:07:10 GMT<br/>
+RetrofitLog--> Content-Type: application/json; charset=utf-8<br/>
+RetrofitLog--> Transfer-Encoding: chunked<br/>
+RetrofitLog--> Connection: keep-alive<br/>
+RetrofitLog--> Keep-Alive: timeout=30<br/>
+RetrofitLog--> X-Xss-Protection: 1; mode=block<br/>
+RetrofitLog--> X-Douban-Mobileapp: 0<br/>
+RetrofitLog--> Expires: Sun, 1 Jan 2006 01:00:00 GMT<br/>
+RetrofitLog--> Pragma: no-cache<br/>
+RetrofitLog--> Cache-Control: must-revalidate, no-cache, private<br/>
+RetrofitLog--> Set-Cookie: bid=hNRKF97wc14; Expires=Tue, 19-Nov-19 14:07:10 GMT; Domain=.douban.com; Path=/<br/>
+RetrofitLog--> X-DOUBAN-NEWBID: hNRKF97wc14<br/>
+RetrofitLog--> X-DAE-Node: brand20<br/>
+RetrofitLog--> X-DAE-App: movie<br/>
+RetrofitLog--> Server: dae<br/>
+RetrofitLog--> X-Content-Type-Options: nosniff<br/>
+RetrofitLog--> <br/>
+RetrofitLog--> {"tags":["热门","最新","豆瓣高分","冷门佳片","华语","欧美","韩国","日本"]}<br/>
+RetrofitLog--> <-- END HTTP (94-byte body)<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.jxq.douban.SearchTagsTest@7113b13f</td></tr>
+<tr>
+<td title='com.jxq.douban.SearchTagsTest.testcase2()'><b>testcase2</b><br>Test class: com.jxq.douban.SearchTagsTest<br>Test method: Tv首页。类别:type=tv source=index<br/>
+<a href="#Output-1653361344" onClick='toggleBox("Output-1653361344", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1653361344" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1653361344">
+RetrofitLog--> --> GET https://movie.douban.com/j/search_tags?type=tv&source=index<br/>
+RetrofitLog--> --> END GET<br/>
+RetrofitLog--> <-- 200 OK https://movie.douban.com/j/search_tags?type=tv&source=index (59ms)<br/>
+RetrofitLog--> Date: Mon, 19 Nov 2018 14:07:11 GMT<br/>
+RetrofitLog--> Content-Type: application/json; charset=utf-8<br/>
+RetrofitLog--> Transfer-Encoding: chunked<br/>
+RetrofitLog--> Connection: keep-alive<br/>
+RetrofitLog--> Keep-Alive: timeout=30<br/>
+RetrofitLog--> X-Xss-Protection: 1; mode=block<br/>
+RetrofitLog--> X-Douban-Mobileapp: 0<br/>
+RetrofitLog--> Expires: Sun, 1 Jan 2006 01:00:00 GMT<br/>
+RetrofitLog--> Pragma: no-cache<br/>
+RetrofitLog--> Cache-Control: must-revalidate, no-cache, private<br/>
+RetrofitLog--> Set-Cookie: bid=sGYFNab98Wc; Expires=Tue, 19-Nov-19 14:07:11 GMT; Domain=.douban.com; Path=/<br/>
+RetrofitLog--> X-DOUBAN-NEWBID: sGYFNab98Wc<br/>
+RetrofitLog--> X-DAE-Node: brand49<br/>
+RetrofitLog--> X-DAE-App: movie<br/>
+RetrofitLog--> Server: dae<br/>
+RetrofitLog--> X-Content-Type-Options: nosniff<br/>
+RetrofitLog--> <br/>
+RetrofitLog--> {"tags":["热门","国产剧","综艺","美剧","日剧","韩剧","日本动画","纪录片"]}<br/>
+RetrofitLog--> <-- END HTTP (94-byte body)<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.jxq.douban.SearchTagsTest@7113b13f</td></tr>
+</table><p>
+</body>
+</html>
