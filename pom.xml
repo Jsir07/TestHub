@@ -139,7 +139,7 @@
                     <encoding>UTF-8</encoding>
                     <suiteXmlFiles>
                         <suiteXmlFile>${project.basedir}/target/classes/testNg/${xmlFileName}</suiteXmlFile>
-                        <!--<suiteXmlFile>${project.basedir}/target/classes/testNg/api/push/RegisterToken-TestSuite.xml</suiteXmlFile>-->
+                        <!--<suiteXmlFile>${project.basedir}/target/classes/testNg/api/APICollection-TestSuite.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
