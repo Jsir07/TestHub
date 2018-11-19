@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
+    <!--为了maven打包编译时后台一直输出警告信息。导致构建失败-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <xmlFileName></xmlFileName>
@@ -123,20 +124,25 @@
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
+                <!--扫描替换参数的文件路径-->
             </resource>
         </resources>
 
         <filters>
             <filter>src/main/filters/filter-${env}.properties</filter>
+            <!--环境过滤器的配置方式，回头需要在该路径下建立对应文件-->
         </filters>
         <plugins>
             <plugin>
+                <!--该插件是解决命令下执行mvn test指定testng xxx.xml 文件 的配置-->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.0</version>
                 <configuration>
+                    <!--为了解决在jenkins maven执行test 报告乱码问题，编码格式设置为UTF-8-->
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                     <encoding>UTF-8</encoding>
+                    <!--动态指定执行的xml文件。${project.basedir}项目目录，${xmlFileName}maven文件-->
                     <suiteXmlFiles>
                         <suiteXmlFile>${project.basedir}/target/classes/testNg/${xmlFileName}</suiteXmlFile>
                         <!--<suiteXmlFile>${project.basedir}/target/classes/testNg/api/APICollection-TestSuite.xml</suiteXmlFile>-->
